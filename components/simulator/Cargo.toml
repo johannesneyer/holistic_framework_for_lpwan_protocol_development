@@ -1,0 +1,15 @@
+[package]
+name = "protocol_simulator"
+version = "0.1.0"
+edition = "2021"
+authors = ["Johannes Neyer"]
+license = "MIT"
+
+[dependencies]
+protocol_api = { path = "../protocol/api" }
+protocol_event_writer = { path = "../../libraries/protocol_event_writer" }
+sorted_linked_list = { path = "../../libraries/sorted_linked_list" }
+lightning = { path = "../protocol/lightning" }
+log = "0.4.20"
+rand = "0.8.5"
+rand_chacha = "0.3.1"

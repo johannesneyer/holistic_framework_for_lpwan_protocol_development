@@ -1,0 +1,32 @@
+[project]
+name = "lightning-event-log-analysis"
+version = "0.1.0"
+authors = [
+    { name = "Johannes Neyer" }
+]
+license = "MIT"
+dependencies = [
+  "networkx==3.3",
+  "pygraphviz==1.13",
+  "matplotlib==3.9.2",
+]
+readme = "README.md"
+requires-python = ">= 3.11"
+
+[project.scripts]
+"analysis" = "lightning_event_log_analysis.analysis:main"
+"timeline" = "lightning_event_log_analysis.timeline:main"
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+
+[[tool.mypy.overrides]]
+module = "lightning_event_log_analysis.analysis"
+disallow_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = [
+    "networkx"
+]
+ignore_missing_imports = true

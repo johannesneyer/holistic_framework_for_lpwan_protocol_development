@@ -1,0 +1,17 @@
+[package]
+name = "protocol_api"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+log = { workspace = true }
+defmt = { version = "0.3.5", optional = true }
+serde = { version = "1.0.197", default-features = false, features = ["derive"] }
+rand_core = "0.6.4"
+heapless = "0.8.0"
+
+[features]
+defmt = ["dep:defmt"]
+
